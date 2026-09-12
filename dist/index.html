@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guias de introdução ao Java e à arquitetura do WebTrans para estagiários."
+    />
+    <title>Guias Java · WebTrans</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="content.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="topbar">
+      <a class="brand" href="#/guia-java-basico/inicio" aria-label="Página inicial dos guias">
+        <span class="brand-mark" aria-hidden="true">J</span>
+        <span>
+          <strong>Guias Java</strong>
+          <small>Trilha técnica WebTrans</small>
+        </span>
+      </a>
+
+      <nav class="guide-switcher" aria-label="Escolha do guia">
+        <a data-guide-link="guia-java-basico" href="#/guia-java-basico/inicio">
+          <span>01</span> Java básico
+        </a>
+        <a data-guide-link="guia-java-webtrans" href="#/guia-java-webtrans/inicio">
+          <span>02</span> Java no WebTrans
+        </a>
+      </nav>
+
+      <button class="icon-button mobile-menu" id="mobile-menu" type="button" aria-label="Abrir índice" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <p class="eyebrow" id="sidebar-eyebrow">GUIA 01</p>
+          <h2 id="sidebar-title">Java básico</h2>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" /></svg>
+            <span class="sr-only">Buscar no guia</span>
+            <input id="search-input" type="search" placeholder="Buscar neste guia" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+        </div>
+
+        <nav class="section-nav" id="section-nav" aria-label="Seções do guia"></nav>
+
+        <div class="sidebar-footer">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p><strong>Java 8</strong><br />Conteúdo compatível com o projeto</p>
+        </div>
+      </aside>
+
+      <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+      <main id="conteudo" class="content" tabindex="-1">
+        <div id="search-results" class="search-results" hidden></div>
+        <article id="article" class="article"></article>
+        <nav class="page-nav" id="page-nav" aria-label="Navegação entre seções"></nav>
+        <footer class="content-footer">
+          <p>Material de apoio para onboarding técnico.</p>
+          <a href="#/guia-java-basico/inicio">Voltar ao início</a>
+        </footer>
+      </main>
+
+      <aside class="on-page" aria-label="Nesta página">
+        <p>Nesta página</p>
+        <nav id="on-page-nav"></nav>
+      </aside>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Código copiado</div>
+  </body>
+</html>
