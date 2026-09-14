@@ -1,84 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Guias de introdução ao Java e à arquitetura do WebTrans para estagiários."
-    />
-    <title>Guias Java · WebTrans</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="content.js" defer></script>
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-
-    <header class="topbar">
-      <a class="brand" href="#/guia-java-basico/inicio" aria-label="Página inicial dos guias">
-        <span class="brand-mark" aria-hidden="true">J</span>
-        <span>
-          <strong>Guias Java</strong>
-          <small>Trilha técnica WebTrans</small>
-        </span>
-      </a>
-
-      <nav class="guide-switcher" aria-label="Escolha do guia">
-        <a data-guide-link="guia-java-basico" href="#/guia-java-basico/inicio">
-          <span>01</span> Java básico
-        </a>
-        <a data-guide-link="guia-java-webtrans" href="#/guia-java-webtrans/inicio">
-          <span>02</span> Java no WebTrans
-        </a>
-      </nav>
-
-      <button class="icon-button mobile-menu" id="mobile-menu" type="button" aria-label="Abrir índice" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </header>
-
-    <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
-
-    <div class="app-shell">
-      <aside class="sidebar" id="sidebar">
-        <div class="sidebar-head">
-          <p class="eyebrow" id="sidebar-eyebrow">GUIA 01</p>
-          <h2 id="sidebar-title">Java básico</h2>
-          <label class="search-box">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" /></svg>
-            <span class="sr-only">Buscar no guia</span>
-            <input id="search-input" type="search" placeholder="Buscar neste guia" autocomplete="off" />
-            <kbd>/</kbd>
-          </label>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia WebTrans e Java</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar" aria-label="Navegação principal">
+        <div class="brand">
+            <span class="brand-mark">WT</span>
+            <div>
+                <strong>WebTrans Lab</strong>
+                <small>Introdução ao desenvolvimento Java web</small>
+            </div>
         </div>
 
-        <nav class="section-nav" id="section-nav" aria-label="Seções do guia"></nav>
+        <label class="search">
+            <span>Buscar conteúdo</span>
+            <input id="searchInput" type="search" placeholder="Ex.: JDBC, servlet, DAO">
+        </label>
 
-        <div class="sidebar-footer">
-          <span class="status-dot" aria-hidden="true"></span>
-          <p><strong>Java 8</strong><br />Conteúdo compatível com o projeto</p>
-        </div>
-      </aside>
+        <nav class="nav-list" id="moduleNav"></nav>
+    </aside>
 
-      <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <main class="app-shell">
+        <section class="hero" id="inicio">
+            <div class="hero-copy">
+                <p class="eyebrow">Documento auxiliar de estudo</p>
+                <h1>Dois módulos para entender estrutura Java e estrutura WebTrans.</h1>
+                <p>
+                    Uma interface educacional baseada nos arquivos <strong>ESTRUTURA.md</strong> e
+                    <strong>ESTRUTURA_JAVA.md</strong>, organizada em dois blocos de estudo com
+                    explicações conceituais, exemplos e checklists para introdução ao desenvolvimento.
+                </p>
+            </div>
 
-      <main id="conteudo" class="content" tabindex="-1">
-        <div id="search-results" class="search-results" hidden></div>
-        <article id="article" class="article"></article>
-        <nav class="page-nav" id="page-nav" aria-label="Navegação entre seções"></nav>
-        <footer class="content-footer">
-          <p>Material de apoio para onboarding técnico.</p>
-          <a href="#/guia-java-basico/inicio">Voltar ao início</a>
-        </footer>
-      </main>
+            <div class="flow-board" aria-label="Fluxo entre camadas">
+                <button class="flow-node active" data-flow="interface">Interface</button>
+                <button class="flow-node" data-flow="controller">Controller</button>
+                <button class="flow-node" data-flow="service">BO/Service</button>
+                <button class="flow-node" data-flow="dao">DAO</button>
+                <button class="flow-node" data-flow="database">PostgreSQL</button>
+            </div>
+        </section>
 
-      <aside class="on-page" aria-label="Nesta página">
-        <p>Nesta página</p>
-        <nav id="on-page-nav"></nav>
-      </aside>
-    </div>
+        <section class="insight-band">
+            <article>
+                <span>01</span>
+                <strong>Separação de responsabilidades</strong>
+                <p>Cada camada resolve um tipo de problema e reduz acoplamento entre interface, regra e banco.</p>
+            </article>
+            <article>
+                <span>02</span>
+                <strong>Java 8 e Java EE 7</strong>
+                <p>O estudo considera a stack usada no WebTrans: Servlets, JSP, JDBC, WAR e Tomcat.</p>
+            </article>
+            <article>
+                <span>03</span>
+                <strong>Leitura de código legado</strong>
+                <p>O material destaca padrões atuais e estruturas antigas como BeanCad, BeanConsulta e BeanConexao.</p>
+            </article>
+        </section>
 
-    <div class="toast" id="toast" role="status" aria-live="polite">Código copiado</div>
-  </body>
+        <section class="workspace">
+            <div class="module-panel" id="modulePanel"></div>
+
+            <aside class="study-panel">
+                <div class="panel-block">
+                    <h2>Fluxo conceitual</h2>
+                    <p id="flowDescription"></p>
+                </div>
+
+                <div class="panel-block">
+                    <h2>Trilha recomendada</h2>
+                    <ol class="study-path" id="studyPath"></ol>
+                </div>
+
+                <div class="panel-block">
+                    <h2>Checklist de rotina</h2>
+                    <ul class="checklist" id="routineChecklist"></ul>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+</body>
 </html>
